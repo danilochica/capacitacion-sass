@@ -1,0 +1,50 @@
+.content-cuantify {
+    display: flex;
+
+}
+
+
+.card-circle-small {
+    $bgs: mix($color-principal, $color-green);
+    @include circle(100px,$bgs, "pedro");
+
+}
+
+.card-circle-mediun {
+    $bgs: mix($color-principal, $color-orange);
+    @include circle(200px,$bgs, "juan");
+
+}
+
+.card-circle-big {
+    $bgs: mix($color-principal, $color-red);
+    @include circle(300px,$bgs, "carmelita")
+
+}
+
+.success{
+    //@extend %notify;
+    @include notifies($color-green);
+
+}
+
+.warning{
+   // @extend %notify;
+   @include notifies($color-orange);
+}
+
+.error{
+    //@extend %notify;
+    @include notifies($color-red);
+}
+
+
+
+
+.list-notification {
+    //position: absolute;
+    top: 0;
+    right: 0;
+
+  
+}

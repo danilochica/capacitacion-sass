@@ -1,0 +1,50 @@
+
+@if $contrast == true {
+    body{
+        background: $black;
+    }
+    $color-principal:grayscale(#0033A0);
+    $color-secundario:grayscale(#00A7C0);
+    $color-green:grayscale(#438643);
+    $color-orange:grayscale( orange);
+    $color-red: grayscale(red);
+
+    img {
+        filter: grayscale(100%);
+    }
+    
+}
+
+@each $var in $ubicacion {
+    .margin-#{$var} {
+        margin-#{$var}: 10px;
+        flex-wrap: wrap;
+    }
+    
+}
+
+  
+
+
+@for $i from 1 through 12  {  // el through incluye el 12
+    .grid-#{$i} {
+        width: (100%*$i)/12 ;
+        float: left;
+        min-height: 100px;
+        //background: lighten($color-secundario, $i);
+    }
+    
+}
+
+@for $j from 1 through 10 {
+
+    .items-#{$j}{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+
+        background-color: mix($color-red,$color-green, $j*10);
+    }
+    
+}
+

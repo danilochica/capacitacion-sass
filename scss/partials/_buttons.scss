@@ -1,0 +1,33 @@
+.btn{
+    background-color: $color-principal;
+    color: $white;
+    padding: 0 20px;
+    border-radius: 20px;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+    
+    border{
+        width: 1px;
+        style: solid;
+        color: $color-secundario;
+    };
+    
+    &:hover {
+        background-color: darken($color-principal, 15%);
+        border: {
+            width: 3px;
+        };
+    }
+
+    aside & {
+        background-color: darken($color-secundario, 20%);
+        
+        &:hover {
+            background-color: #006675;
+        }
+    }
+
+ 
+
+}

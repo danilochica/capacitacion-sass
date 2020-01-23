@@ -1,0 +1,57 @@
+@mixin notifies ($bg) {
+    width: 300px;
+    padding: 20px;
+    border: solid 1px $bg;
+    border-radius: 0 0 25px 0;
+    font-family: $font-general;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    background-color:rgba($bg, .6);
+
+    img{
+        width: 40px;
+        margin-right:20px;
+    }
+}
+
+@mixin letter ($size){
+    width: $size/2;
+    height: $size/20;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: block;
+    background-color: $color-secundario;
+    color: $white;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+@mixin circle ($size, $color, $person){
+    width: $size;
+    background: {
+        color: $color;
+        image: url("../img/content/#{$person}.png");
+        @if $contrast == true {
+            image: url("../img/content/avatar.png");
+        };
+    }
+    background-size: cover;;
+    height: $size;
+    border-radius: $size/2;
+    position: relative;
+
+    //Pseudoelemento
+    &:after{ 
+        content: $person;
+        @include letter(100px);
+
+    }
+    
+
+}
